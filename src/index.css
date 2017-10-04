@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightblue;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  border: 0;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+input[type=checkbox] + label {
+  position: absolute;
+  top: 50%;
+  display: block;
+  transform: translateY(-50%);
+}
+
+input[type=checkbox] + label:before {
+  margin: 10px;
+}
+
+button {
+  font-size: 1.5rem;
+  margin-right: 5px;
+  border: 0;
+  background: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.todo-app {
+  max-width: 600px;
+  width: auto;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.todo-app span {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 5px;
+}
+
+.form-wrapper {
+  position: relative;
+}
+
+.form-wrapper input {
+  padding-right: 55px;
+}
+
+.form-wrapper button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+.todo-list {
+  margin-top: 20px;
+}
+
+.todo-item {
+  background: white;
+  position: relative;
+  margin-bottom: 5px;
+  list-style-type: none;
+}
+
+.todo-item span {
+  width: calc(100% - 30px);
+  margin-left: 30px;
+  padding-right: 55px;
+  word-wrap: break-word;
+}
+
+.todo-item:hover .controls-wrapper {
+  display: block;
+}
+
+.controls-wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../src/fonts/fontello.eot?30737089');
+  src: url('../src/fonts/fontello.eot?30737089#iefix') format('embedded-opentype'),
+  url('../src/fonts/fontello.woff2?30737089') format('woff2'),
+  url('../src/fonts/fontello.woff?30737089') format('woff'),
+  url('../src/fonts/fontello.ttf?30737089') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin: 5px;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"] {
+  cursor: pointer;
+}
+
+.icon-edit:before {
+  content: '\e800';
+}
+
+.icon-add:before {
+  content: '\e801';
+}
+
+.icon-remove:before {
+  content: '\e802';
+}
+
+.icon-check-empty:before {
+  content: '\e804';
+}
+
+.icon-check:before {
+  content: '\e805';
+}
